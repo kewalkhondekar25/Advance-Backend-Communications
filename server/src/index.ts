@@ -1,6 +1,6 @@
 import express from "express";
 import cors from "cors";
-import { router } from "./routes/register.routes";
+import { router } from "../src/routes/register.routes";
 
 const app = express();
 const port = 8080;
@@ -14,7 +14,7 @@ app.get("/", (req, res) => {
   })
 });
 
-app.use("api/v1", router)
+app.use("/api/v1", router)
 
 app.listen(port, () => {
   console.log(`server is listening on port: ${port}`);

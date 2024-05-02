@@ -1,6 +1,9 @@
 import express from "express";
 import cors from "cors";
+import dotenv from "dotenv";
 import { router } from "./routes/register.routes";
+
+dotenv.config({path: "../.env"});
 
 const app = express();
 const port = 8080;

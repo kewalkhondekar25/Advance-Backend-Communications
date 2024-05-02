@@ -1,7 +1,14 @@
 import express from "express";
 import {Queue} from "bullmq";
 
-const emailQueue = new Queue("email-queue");
+const emailQueue = new Queue("email-queue", {
+  connection: {
+    host: process.env.AIVEN_HOST,
+    port: parseInt(process.env.AIVEN_PORT),
+    username: process.env.AIVEN_USER,
+    password: process.env.AIVEN_PASSWORD
+  }
+});
 
 const register = async (req: express.Request, res: express.Response) => {
   try {

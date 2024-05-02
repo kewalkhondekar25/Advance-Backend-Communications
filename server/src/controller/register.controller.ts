@@ -1,16 +1,26 @@
 import express from "express";
 
-const register = (req: express.Request, res: express.Response) => {
+const register = async (req: express.Request, res: express.Response) => {
   try {
     const {userName, userEmail} = req.body;
-    console.log("registering");
-    res.status(200).json({
-      message: "register successfully",
+
+    if(!(userName && userEmail)){
+      return res.status(500).json({
+        message: "username & email required"
+      })
+    }
+    // await new Promise<void>((resolve, reject) => {
+    //   setTimeout(() => {
+    //     resolve();
+    //   }, 2000);
+    // })
+    return res.status(200).json({
+      message: "Registration Successful. You will recieve Invite Email soon",
       name: userName,
       emai: userEmail
     })
   } catch (error) {
-    res.status(500).json({
+    return res.status(500).json({
       message: error.message
     })
   }

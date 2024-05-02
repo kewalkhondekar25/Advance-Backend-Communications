@@ -1,0 +1,22 @@
+{
+  "name": "message-queue",
+  "version": "1.0.0",
+  "description": "message queue implementation in nodejs",
+  "main": "index.ts",
+  "scripts": {
+    "start": "nodemon",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "queue",
+    "ts",
+    "redis"
+  ],
+  "author": "Kewal Khondekar",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  }
+}

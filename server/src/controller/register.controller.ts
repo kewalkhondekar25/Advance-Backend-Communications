@@ -1,6 +1,7 @@
 import express from "express";
 import {Queue} from "bullmq";
 
+console.log(process.env.AIVEN_HOST);
 const emailQueue = new Queue("email-queue", {
   connection: {
     host: process.env.AIVEN_HOST,

@@ -1,0 +1,24 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "primary backend",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsc -b && node dist/index.js"
+  },
+  "keywords": [
+    "nodejs",
+    "typescript",
+    "redis"
+  ],
+  "author": "Kewal Khondekar",
+  "license": "ISC",
+  "dependencies": {
+    "@types/express": "^5.0.0",
+    "express": "^4.21.2",
+    "redis": "^4.7.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.2"
+  }
+}

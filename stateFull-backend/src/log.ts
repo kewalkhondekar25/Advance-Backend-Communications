@@ -1,9 +1,9 @@
-import { games } from "./store";
+import { store } from "./store";
 
 const startLogger = () => {
   
   setInterval(() => {
-    console.log(JSON.stringify(games, null, 2));
+    console.log(store.log());
   }, 2000);
 
 };

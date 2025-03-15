@@ -1,0 +1,22 @@
+{
+  "name": "kafka",
+  "version": "1.0.0",
+  "description": "kafka implementation in nodejs server",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsc -b && node dist/index.js"
+  },
+  "keywords": [
+    "kafka",
+    "nodejs",
+    "typescript"
+  ],
+  "author": "Kewal Khondekar",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.8.2"
+  },
+  "dependencies": {
+    "kafkajs": "^2.2.4"
+  }
+}
